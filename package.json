@@ -1,0 +1,31 @@
+{
+  "name": "pi-bot",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "smoke": "node src/smoke.mjs",
+    "smoke:signals": "node src/signals-smoke.mjs",
+    "m1": "node --experimental-strip-types src/main.ts",
+    "m1:accept": "node --experimental-strip-types test/m1.acceptance.ts",
+    "web:dev": "npm --prefix webui run dev",
+    "web:build": "npm --prefix webui run build",
+    "m2:accept": "node --experimental-strip-types test/m2.acceptance.ts",
+    "real:smoke": "node --experimental-strip-types test/real.smoke.ts",
+    "features:accept": "node --experimental-strip-types test/features.acceptance.ts",
+    "dm:accept": "node --experimental-strip-types test/dm.acceptance.ts",
+    "demo:seed": "node test/demo.seed.mjs",
+    "shots": "node test/shot.mjs http://127.0.0.1:18860 docs",
+    "ui:check": "node test/ui.panel.mjs http://127.0.0.1:18860 g1",
+    "ui:composer": "node test/ui.composer.mjs"
+  },
+  "dependencies": {
+    "@earendil-works/pi-durable": "file:../repo/packages/durable",
+    "@earendil-works/pi-ai": "file:../repo/packages/ai",
+    "@earendil-works/chord": "file:../repo/packages/chord",
+    "@earendil-works/pi-schema": "file:../repo/packages/schema",
+    "@earendil-works/pi-telemetry": "file:../repo/packages/telemetry",
+    "@earendil-works/pi-codemode": "file:../repo/packages/codemode",
+    "ws": "^8.18.0"
+  }
+}

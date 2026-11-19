@@ -1,0 +1,19 @@
+{
+  "name": "musebot-webui",
+  "version": "0.5.0",
+  "private": true,
+  "type": "module",
+  "description": "musebot Vue 3 web UI (rewrite of the zero-build classic client, same look & feel)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^5.4.11"
+  }
+}
